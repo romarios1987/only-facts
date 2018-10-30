@@ -1,0 +1,15 @@
+{
+  "name": "only-facts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/romarios1987/only-facts",
+  "author": "romarios1987 <romios047@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-plugin-node": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}

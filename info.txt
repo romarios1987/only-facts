@@ -4,3 +4,4 @@ yarn add express
 yarn add nodemon
 yarn add ejs
 yarn add body-parser
+yarn add cross-env

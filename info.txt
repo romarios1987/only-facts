@@ -2,3 +2,5 @@ yarn init -y
 yarn add -D eslint eslint-plugin-node
 yarn add express
 yarn add nodemon
+yarn add ejs
+yarn add body-parser

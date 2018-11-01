@@ -1,3 +1,5 @@
+mongoose - orm работает с MondoDb
+
 yarn init -y
 yarn add -D eslint eslint-plugin-node
 yarn add express

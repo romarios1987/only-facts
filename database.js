@@ -12,7 +12,7 @@ module.exports = () => {
             .on('close', () => console.log('Database connection closed'))
             .once('open', () => resolve(mongoose.connection[0]));
 
-        mongoose.connect(config.MONGO_URL)
+        mongoose.connect(config.mongoURI)
 
     })
 };

@@ -1,18 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-<a href="/create">Add</a>
-
-<ul>
-    <% posts.forEach(function(post){ %>
-        <li><b><%= post.title %></b></li>
-        <li><%= post.body %></li><hr>
-    <% }); %>
-
-</ul>
-</body>
-</html>
+<% include layout/header.ejs %>
+<h2>Главная страница</h2>
+<% include layout/footer.ejs %>

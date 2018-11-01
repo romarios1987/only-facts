@@ -7,11 +7,15 @@
   "license": "MIT",
   "scripts": {
     "start": "cross-env PORT=3001 node index.js",
-    "dev": "nodemon index.js"
+    "dev": "gulp & nodemon index.js"
   },
   "devDependencies": {
     "eslint": "^5.8.0",
     "eslint-plugin-node": "^8.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.2",
     "nodemon": "^1.18.5"
   },
   "engines": {

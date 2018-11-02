@@ -1,6 +1,9 @@
 /* eslint-disable node/no-unpublished-require */
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const cssnano = require('gulp-cssnano');
+const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
 const nodemon = require('gulp-nodemon');
 const browserSync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
@@ -35,7 +38,14 @@ gulp.task('js', function () {
 // Compile SASS to CSS.
 gulp.task('sass', function () {
     return gulp.src('dev/sass/**/*.sass')
+        .pipe(plumber())
         .pipe(sass().on('error', sass.logError))
+        .pipe(
+            autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
+                cascade: true
+            })
+        )
+        .pipe(cssnano())
         .pipe(gulp.dest('public/stylesheet'))
         .pipe(browserSync.stream());
 });

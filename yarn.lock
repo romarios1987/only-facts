@@ -1019,6 +1019,11 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
+"crc@>=2.0 <3":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/crc/-/crc-2.1.1.tgz#18ebc6327af56b594b1fbf93677dd083807d7803"
+  integrity sha1-GOvGMnr1a1lLH7+TZ33Qg4B9eAM=
+
 create-error-class@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
@@ -5313,6 +5318,13 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
+
+static-asset@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/static-asset/-/static-asset-0.6.0.tgz#f7d1817d8387f27a09f8312427b90ad437b535c0"
+  integrity sha1-99GBfYOH8noJ+DEkJ7kK1De1NcA=
+  dependencies:
+    crc ">=2.0 <3"
 
 static-extend@^0.1.1:
   version "0.1.2"

@@ -63,7 +63,7 @@ gulp.task('browser-sync', ['js', 'sass'], function () {
 
 gulp.task('nodemon', ['browser-sync'], function (cb) {
     let running = false;
-    return nodemon({script: './index'}).on('start', function () {
+    return nodemon({script: './app'}).on('start', function () {
         if (!running) {
             running = true;
             cb();

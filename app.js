@@ -36,11 +36,28 @@ app.use('/javascript', express.static(path.join(__dirname, 'node_modules', 'jque
 app.use('/javascript', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js')));
 
 
-
 // routes
 app.get('/', (req, res) => {
     res.render('index')
 });
+
+
+// catch 404 and forward to error handler
+app.use((req, res, next) => {
+    const err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
+// error handler
+app.use((error, req, res, next) => {
+    res.status(error.status || 500);
+    res.render('error', {
+        message: error.message,
+        error: !config.IS_PRODUCTION ? error : {}
+    });
+});
+
 
 
 app.listen(config.PORT, () =>

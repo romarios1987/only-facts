@@ -5,7 +5,6 @@ const path = require('path');
 const mongoose = require('mongoose');
 const config = require('./config');
 
-
 // database
 mongoose.Promise = global.Promise;
 mongoose.set('debug', config.IS_PRODUCTION);
@@ -17,7 +16,6 @@ mongoose.connection
         console.log(`Connected to ${info.host}:${info.port}/${info.name}`);
     });
 mongoose.connect(config.mongoURI, { useNewUrlParser: true });
-
 
 
 // express
@@ -34,7 +32,6 @@ app.use(staticAsset(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/javascript', express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist')));
 app.use('/javascript', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js')));
-
 
 // routes
 app.get('/', (req, res) => {
@@ -57,7 +54,6 @@ app.use((error, req, res, next) => {
         error: !config.IS_PRODUCTION ? error : {}
     });
 });
-
 
 
 app.listen(config.PORT, () =>

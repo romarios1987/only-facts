@@ -1,5 +1,8 @@
 /info
 /node_modules
-/.idea
 /dev
 .env
+.idea
+.DS_Store
+yarn.lock
+package-lock.json

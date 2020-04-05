@@ -12,7 +12,7 @@ module.exports = () => {
             .on('close', () => console.log('Database connection closed'))
             .once('open', () => resolve(mongoose.connection[0]));
 
-        mongoose.connect(config.mongoURI)
+        mongoose.connect(config.mongoURI, {useUnifiedTopology: true})
 
     })
 };
